@@ -3,8 +3,26 @@
 <html>
     <head><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
-    <body>
+    
+      <body>
+        {% if likes_same_sport == true %}
+            <h1> tennis</h1>
+            <p>tennis is fun you should try it</p>
+
+            <ul>
+                {% for player in fav %}
+                <li> {{player}} </li>
+                {% endfor %}
+            </ul>
+
+        
+        {% else %}
         <h1> tennis</h1>
         <p>tennis is fun you should try it</p>
+
+        {% endif %}
+            <h2></h2>
+       <!-- Previous for-loop -->
+
     </body>
 </html>
